@@ -1,0 +1,9 @@
+export { Loading } from "./Loading";
+export { Header } from "./Header";
+export { Navbar } from "./Navbar";
+export { AnimatedBackground } from "./AnimatedBackground";
+export { Description } from "./Description";
+export { TypingText } from "./TypingText";
+export { SkillsList } from "./SkillsList";
+export { TagsList } from "./TagsList";
+export { SocialList } from "./SocialList";
