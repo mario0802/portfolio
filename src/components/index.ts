@@ -7,3 +7,8 @@ export { TypingText } from "./TypingText";
 export { SkillsList } from "./SkillsList";
 export { TagsList } from "./TagsList";
 export { SocialList } from "./SocialList";
+export { ScrollSection } from "./ScrollSection";
+export { ProjectCard } from "./ProjectCard";
+export { ContactForm } from "./ContactForm";
+export { Footer } from "./Footer";
+export { NavItem } from "./NavItem";

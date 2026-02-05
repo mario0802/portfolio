@@ -1,5 +1,5 @@
 import { RootLayout } from "@/components/layouts";
-import { Mario } from "@/features";
+import { Mario, ProjectDetail } from "@/features";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -11,7 +11,12 @@ const router = createBrowserRouter([
                 index: true,
                 Component: Mario
             },
-        ]
+            {
+                path: "projects/:projectId",
+                Component: ProjectDetail,
+            },
+        ],
+        
     },
 ])
 

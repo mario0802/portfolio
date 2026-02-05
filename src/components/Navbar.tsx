@@ -1,5 +1,8 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import logo from "@/assets/image/logo.jpg";
+import { NavItem } from "@/components/NavItem";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
+import { Menu } from "lucide-react";
 
 export const Navbar = () => {
     return (
@@ -21,18 +24,42 @@ export const Navbar = () => {
             </div>
 
             <div className="ml-auto hidden md:flex items-center gap-6">
-                <a href="#home" className="text-white hover:text-red-500 transition-colors underline-offset-8">
-                    Home
-                </a>
-                <a href="#about" className="text-white hover:text-red-500 transition-colors underline-offset-8">
-                    About
-                </a>
-                <a href="#projects" className="text-white hover:text-red-500 transition-colors underline-offset-8">
-                    Projects
-                </a>
-                <a href="#contact" className="text-white hover:text-red-500 transition-colors underline-offset-8">
-                    Contact
-                </a>
+                <NavItem label="Home" section="home" />
+                <NavItem label="About" section="about" />
+                <NavItem label="Projects" section="projects" />
+                <NavItem label="Contact" section="contact" />
+            </div>
+
+            <div className="ml-auto md:hidden">
+                <Sheet>
+                    <SheetTrigger asChild>
+                        <button className="p-2 rounded-md hover:bg-white/10 transition">
+                            <Menu className="h-6 w-6 text-white" />
+                        </button>
+                    </SheetTrigger>
+
+                    <SheetContent
+                        side="top"
+                        className="
+                            bg-gray-950 text-white
+                            w-full
+                            h-auto
+                            border-b border-white/10
+                        "
+                    >
+                        <SheetHeader className="hidden">
+                                <SheetTitle>Menu</SheetTitle>
+                                <SheetDescription>Description</SheetDescription>
+                        </SheetHeader>
+
+                        <div className="flex flex-col gap-6 py-6 ">
+                            <NavItem label="Home" section="home" />
+                            <NavItem label="About" section="about" />
+                            <NavItem label="Projects" section="projects" />
+                            <NavItem label="Contact" section="contact" />
+                        </div>
+                    </SheetContent>
+                </Sheet>
             </div>
         </nav>
     )

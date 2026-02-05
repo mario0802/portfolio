@@ -4,11 +4,11 @@ import MarioImage from "@/assets/image/Mario.png";
 export const Home = () => {
     return (
         <>
-            <section className="h-[calc(100vh-4rem)] flex justify-center items-center py-10">
+            <section className="min-h-[calc(100vh-4rem)] flex justify-center items-center py-10">
                 <div className="w-full md:w-[95%] lg:w-[70%] px-4 h-full">
                     <div className="flex flex-col lg:flex-row h-full items-center">
                         <Description />
-                        <div className="w-full h-full lg:w-[50%] flex justify-center items-center">
+                        <div className="w-full h-full lg:w-[50%] hidden lg:flex justify-center items-center">
                             {/* <div className="h-full w-full bg-red-500"></div> */}
                             <img
                                 src={MarioImage}

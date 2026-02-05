@@ -1,8 +1,10 @@
+import { scrollToSection } from "@/utils";
 import type { LucideIcon } from "lucide-react";
 
 type TagData = {
     text: string;
     icon: LucideIcon;
+    sectionId:string
 };
 
 type Props = {
@@ -12,7 +14,7 @@ type Props = {
 export const Tag = ({ tag }: Props) => {
     const Icon = tag.icon;
     return (
-        <li className="list-none">
+        <li className="list-none" onClick={() => scrollToSection(tag.sectionId)}>
             <span
                 className="inline-flex items-center gap-2 px-5 py-2 text-sm text-white rounded-md bg-black
                 shadow-[0_0_18px_rgba(239,68,68,0.8)]
