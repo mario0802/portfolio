@@ -5,9 +5,9 @@ import { FolderCode, Github, Linkedin, MailPlus, UserPlus } from "lucide-react"
 const SKILL_LIST = ['React', 'Nest JS', '.Net', 'SQL Server', 'Python']
 
 const TAG_LIST:TagProps[] = [
-    {text:'About', icon:UserPlus}, 
-    {text:'Projects', icon:FolderCode}, 
-    {text:'Contact', icon:MailPlus}
+    {text:'About', icon:UserPlus, sectionId:'about'}, 
+    {text:'Projects', icon:FolderCode, sectionId:'projects'}, 
+    {text:'Contact', icon:MailPlus, sectionId:'contact'}
 ]
 
 const SOCIAL_LIST:SocialIconProps[] = [

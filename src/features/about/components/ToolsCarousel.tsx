@@ -1,23 +1,12 @@
 import { useEffect, useRef } from "react";
-import jsLogo from "@/assets/image/logos/javascript.webp";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import type { Tool } from "@/types";
 
-type Tool = {
-    name: string;
-    logo: string;
-};
+interface Props {
+    tools: Tool[]
+}
 
-const tools: Tool[] = [
-    { name: "JavaScript", logo: jsLogo },
-    { name: "TypeScript", logo: jsLogo },
-    { name: "React", logo: jsLogo },
-    { name: "Node.js", logo: jsLogo },
-    { name: "Python", logo: jsLogo },
-    { name: "PostgreSQL", logo: jsLogo },
-    { name: "Docker", logo: jsLogo },
-];
-
-export const ToolsCarousel = () => {
+export const ToolsCarousel = ({tools} : Props) => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const intervalRef = useRef<number | null>(null);
 
@@ -79,21 +68,17 @@ export const ToolsCarousel = () => {
                 md:max-w-[952px]
                 "
                 onMouseEnter={stopAutoplay}
-                onMouseLeave={startAutoplay}
-            >
-                {/* Flecha izquierda */}
+                onMouseLeave={startAutoplay}>
                 <button
                     onClick={() => scrollOne("left")}
                     className="
                     absolute left-2 top-1/2 -translate-y-1/2 z-10
                     bg-black/70 hover:bg-black text-white
                     p-2 rounded-full
-                    "
-                >
+                ">
                     <ChevronLeft size={20} />
                 </button>
 
-                {/* Carrusel */}
                 <div
                     ref={scrollRef}
                     className="
@@ -129,7 +114,6 @@ export const ToolsCarousel = () => {
                     ))}
                 </div>
 
-                {/* Flecha derecha */}
                 <button
                     onClick={() => scrollOne("right")}
                     className="
