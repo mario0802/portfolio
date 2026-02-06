@@ -14,7 +14,7 @@ export const Mario = () => {
         <About />
       </ScrollSection>
 
-      <ScrollSection id="projects">
+      <ScrollSection id="projects" >
         <Projects />
       </ScrollSection>
 
