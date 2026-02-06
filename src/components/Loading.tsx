@@ -1,35 +1,34 @@
 
-import { motion, AnimatePresence } from "motion/react";
-import { LoaderCircle } from "lucide-react";
-import { useNavigation } from "react-router";
-import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
+import marioGift from "@/assets/image/marioGift.gif";
 
-const fadeInOut = {
-    initial: {opacity: 0, translateY:-10},
-    animate: {opacity: 1, translateY: 0},
-    exit: {opacity: 0, translateY:-10},
-}
+export const Loading = () => {
+    const [dots, setDots] = useState("")
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setDots(prev => (prev.length >= 3 ? "" : prev + "."))
+        }, 500)
 
-export const Loading = ({className}: React.ComponentProps<'div'>) => {
-    const navigation = useNavigation();
-    const isLoading = navigation.state === 'loading';
+        return () => clearInterval(interval)
+    }, [])
 
-    return(
-        <AnimatePresence>
-            {isLoading && (
-                <motion.div
-                    {...fadeInOut}
-                    className={cn(
-                        'fixed left-1/2 -translate-x-1/2 top-[84px] p-2 bg-muted rounded-full shadow-lg',
-                        className,
-                    )}>
-                    <LoaderCircle 
-                        size={32}
-                        className="animate-spin"/>
+    return (
+        <div className="
+        fixed inset-0 z-50
+        flex flex-col items-center justify-center
+        bg-black
+        text-white
+        ">
+            <img
+                src={marioGift}
+                alt="Loading"
+                className="w-32 h-32 mb-6"
+            />
 
-                </motion.div>
-            )}
-        </AnimatePresence>
+            <p className="text-lg tracking-wide">
+                Loading{dots}
+            </p>
+        </div>
     )
 }

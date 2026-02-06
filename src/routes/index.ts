@@ -1,3 +1,4 @@
+import { NotFound } from "@/components";
 import { RootLayout } from "@/components/layouts";
 import { Mario, ProjectDetail } from "@/features";
 import { createBrowserRouter } from "react-router-dom";
@@ -15,8 +16,12 @@ const router = createBrowserRouter([
                 path: "projects/:projectId",
                 Component: ProjectDetail,
             },
+            {
+                path: "*",
+                Component: NotFound,
+            },
         ],
-        
+
     },
 ])
 

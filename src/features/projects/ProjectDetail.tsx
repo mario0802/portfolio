@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { BackButton, ProjectCarousel, ProjectInfo } from "./components"
 import { ToolsCarousel } from "../about/components";
-import { Footer } from "@/components";
+import { Footer, NotFound } from "@/components";
 import type { ProjectDetails } from "@/types";
 import { projects } from "@/data/projects";
 
@@ -12,9 +12,7 @@ export const ProjectDetail = () => {
     )
     if (!project) {
         return (
-            <div className="text-white text-center text-xl">
-                Proyecto no encontrado
-            </div>
+            <NotFound/>
         )
     }
 
