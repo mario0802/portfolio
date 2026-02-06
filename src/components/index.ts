@@ -12,3 +12,4 @@ export { ProjectCard } from "./ProjectCard";
 export { ContactForm } from "./ContactForm";
 export { Footer } from "./Footer";
 export { NavItem } from "./NavItem";
+export { NotFound } from "./NotFound";
