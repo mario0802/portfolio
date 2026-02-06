@@ -11,8 +11,8 @@ const TAG_LIST:TagProps[] = [
 ]
 
 const SOCIAL_LIST:SocialIconProps[] = [
-    {url:'#', icon:Github}, 
-    {url:'#', icon:Linkedin}, 
+    {url:'https://www.linkedin.com/in/mario-ubilla-6428b0321', icon:Linkedin}, 
+    {url:'https://github.com/mario0802', icon:Github}, 
     {url:'#', icon:MailPlus}
 ]
 
