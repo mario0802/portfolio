@@ -20,7 +20,7 @@ export const Footer = () => {
 
                 <div className="flex items-center gap-3">
                     <a
-                        href="https://github.com/tuusuario"
+                        href="https://github.com/mario0802"
                         target="_blank"
                         className="rounded-full p-2 text-gray-400 hover:text-white hover:bg-white/10 transition"
                     >
@@ -28,7 +28,7 @@ export const Footer = () => {
                     </a>
 
                     <a
-                        href="https://linkedin.com/in/tuusuario"
+                        href="https://www.linkedin.com/in/mario-ubilla-6428b0321"
                         target="_blank"
                         className="rounded-full p-2 text-gray-400 hover:text-white hover:bg-white/10 transition"
                     >
